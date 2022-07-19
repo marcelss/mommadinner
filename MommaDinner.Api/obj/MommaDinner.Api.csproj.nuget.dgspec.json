@@ -1,0 +1,323 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\workspace\\mommadinner\\MommaDinner.Api\\MommaDinner.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\workspace\\mommadinner\\MommaDinner.Api\\MommaDinner.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\workspace\\mommadinner\\MommaDinner.Api\\MommaDinner.Api.csproj",
+        "projectName": "MommaDinner.Api",
+        "projectPath": "C:\\workspace\\mommadinner\\MommaDinner.Api\\MommaDinner.Api.csproj",
+        "packagesPath": "C:\\Users\\marcel.santos\\.nuget\\packages\\",
+        "outputPath": "C:\\workspace\\mommadinner\\MommaDinner.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marcel.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\workspace\\mommadinner\\MommaDinner.Application\\MommaDinner.Application.csproj": {
+                "projectPath": "C:\\workspace\\mommadinner\\MommaDinner.Application\\MommaDinner.Application.csproj"
+              },
+              "C:\\workspace\\mommadinner\\MommaDinner.Contracts\\MommaDinner.Contracts.csproj": {
+                "projectPath": "C:\\workspace\\mommadinner\\MommaDinner.Contracts\\MommaDinner.Contracts.csproj"
+              },
+              "C:\\workspace\\mommadinner\\MommaDinner.Infrastructure\\MommaDinner.InfraStructure.csproj": {
+                "projectPath": "C:\\workspace\\mommadinner\\MommaDinner.Infrastructure\\MommaDinner.InfraStructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\workspace\\mommadinner\\MommaDinner.Application\\MommaDinner.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\workspace\\mommadinner\\MommaDinner.Application\\MommaDinner.Application.csproj",
+        "projectName": "MommaDinner.Application",
+        "projectPath": "C:\\workspace\\mommadinner\\MommaDinner.Application\\MommaDinner.Application.csproj",
+        "packagesPath": "C:\\Users\\marcel.santos\\.nuget\\packages\\",
+        "outputPath": "C:\\workspace\\mommadinner\\MommaDinner.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marcel.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\workspace\\mommadinner\\MommaDinner.Domain\\MommaDinner.Domain.csproj": {
+                "projectPath": "C:\\workspace\\mommadinner\\MommaDinner.Domain\\MommaDinner.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\workspace\\mommadinner\\MommaDinner.Contracts\\MommaDinner.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\workspace\\mommadinner\\MommaDinner.Contracts\\MommaDinner.Contracts.csproj",
+        "projectName": "MommaDinner.Contracts",
+        "projectPath": "C:\\workspace\\mommadinner\\MommaDinner.Contracts\\MommaDinner.Contracts.csproj",
+        "packagesPath": "C:\\Users\\marcel.santos\\.nuget\\packages\\",
+        "outputPath": "C:\\workspace\\mommadinner\\MommaDinner.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marcel.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\workspace\\mommadinner\\MommaDinner.Domain\\MommaDinner.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\workspace\\mommadinner\\MommaDinner.Domain\\MommaDinner.Domain.csproj",
+        "projectName": "MommaDinner.Domain",
+        "projectPath": "C:\\workspace\\mommadinner\\MommaDinner.Domain\\MommaDinner.Domain.csproj",
+        "packagesPath": "C:\\Users\\marcel.santos\\.nuget\\packages\\",
+        "outputPath": "C:\\workspace\\mommadinner\\MommaDinner.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marcel.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\workspace\\mommadinner\\MommaDinner.Infrastructure\\MommaDinner.InfraStructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\workspace\\mommadinner\\MommaDinner.Infrastructure\\MommaDinner.InfraStructure.csproj",
+        "projectName": "MommaDinner.InfraStructure",
+        "projectPath": "C:\\workspace\\mommadinner\\MommaDinner.Infrastructure\\MommaDinner.InfraStructure.csproj",
+        "packagesPath": "C:\\Users\\marcel.santos\\.nuget\\packages\\",
+        "outputPath": "C:\\workspace\\mommadinner\\MommaDinner.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marcel.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\workspace\\mommadinner\\MommaDinner.Application\\MommaDinner.Application.csproj": {
+                "projectPath": "C:\\workspace\\mommadinner\\MommaDinner.Application\\MommaDinner.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.21.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

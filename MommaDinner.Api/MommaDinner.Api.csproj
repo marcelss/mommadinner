@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>9e7f97db-9324-4fea-a4e7-c898eafe0b1e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MommaDinner.Contracts\MommaDinner.Contracts.csproj" />
+    <ProjectReference Include="..\MommaDinner.Application\MommaDinner.Application.csproj" />
+    <ProjectReference Include="..\MommaDinner.Infrastructure\MommaDinner.InfraStructure.csproj" />
+  </ItemGroup>
+
+</Project>

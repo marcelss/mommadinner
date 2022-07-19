@@ -1,0 +1,12 @@
+C:\workspace\mommadinner\MommaDinner.Contracts\bin\Debug\net6.0\MommaDinner.Contracts.deps.json
+C:\workspace\mommadinner\MommaDinner.Contracts\bin\Debug\net6.0\MommaDinner.Contracts.dll
+C:\workspace\mommadinner\MommaDinner.Contracts\bin\Debug\net6.0\MommaDinner.Contracts.pdb
+C:\workspace\mommadinner\MommaDinner.Contracts\obj\Debug\net6.0\MommaDinner.Contracts.csproj.AssemblyReference.cache
+C:\workspace\mommadinner\MommaDinner.Contracts\obj\Debug\net6.0\MommaDinner.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\mommadinner\MommaDinner.Contracts\obj\Debug\net6.0\MommaDinner.Contracts.AssemblyInfoInputs.cache
+C:\workspace\mommadinner\MommaDinner.Contracts\obj\Debug\net6.0\MommaDinner.Contracts.AssemblyInfo.cs
+C:\workspace\mommadinner\MommaDinner.Contracts\obj\Debug\net6.0\MommaDinner.Contracts.csproj.CoreCompileInputs.cache
+C:\workspace\mommadinner\MommaDinner.Contracts\obj\Debug\net6.0\MommaDinner.Contracts.dll
+C:\workspace\mommadinner\MommaDinner.Contracts\obj\Debug\net6.0\refint\MommaDinner.Contracts.dll
+C:\workspace\mommadinner\MommaDinner.Contracts\obj\Debug\net6.0\MommaDinner.Contracts.pdb
+C:\workspace\mommadinner\MommaDinner.Contracts\obj\Debug\net6.0\ref\MommaDinner.Contracts.dll

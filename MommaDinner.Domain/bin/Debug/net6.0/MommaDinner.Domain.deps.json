@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MommaDinner.Domain/1.0.0": {
+        "runtime": {
+          "MommaDinner.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MommaDinner.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
