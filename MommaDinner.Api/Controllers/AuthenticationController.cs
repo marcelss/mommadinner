@@ -1,6 +1,8 @@
 using MommaDinner.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using MommaDinner.Application.Services.Authentication;
+using OneOf;
+using MommaDinner.Application.Common.Errors;
 
 namespace MommaDinner.Api.Controllers;
 
@@ -16,19 +18,24 @@ public class AuthenticationController : ControllerBase
     }
 
 
-    [HttpPost("register")]
+    [HttpPost("oneof/register")]
     public IActionResult Register(RegisterRequest request)
     {
-        var result = _authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
+        OneOf<AuthenticationResult, IError> registerResult = _authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
 
-        var response = new AuthenticationResponse(
+        return registerResult.Match(
+            authResult => Ok(MapAuthResult(authResult)),
+            error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage));
+    }
+
+    private static AuthenticationResponse MapAuthResult(AuthenticationResult result)
+    {
+        return new AuthenticationResponse(
             result.User.Id,
             result.User.FirstName,
             result.User.LastName,
             result.User.Email,
             result.Token);
-
-        return Ok(response);
     }
 
     [HttpPost("login")]
@@ -44,7 +51,7 @@ public class AuthenticationController : ControllerBase
             result.User.LastName,
             result.User.Email,
             result.Token);
-            
+
         return Ok(response);
     }
 }

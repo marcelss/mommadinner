@@ -47,6 +47,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "oneOf": {
+              "target": "Package",
+              "version": "[3.0.223, )"
             }
           },
           "imports": [

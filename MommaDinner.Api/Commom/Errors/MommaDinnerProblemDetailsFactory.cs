@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 
-namespace MommaDinner.Api.Errors;
+namespace MommaDinner.Api.Common.Errors;
 
 public class MommaDinnerProblemDetailsFactory : ProblemDetailsFactory
 {

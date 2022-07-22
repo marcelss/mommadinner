@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UTKUmHD9ff09tYM1SMfttbvOIJKQeYy3ankYPnT3E3Y0Z20txJbbEAEvkMTY3/Fqc84nxPmM/nEgz06bx+XXzg==",
+  "dgSpecHash": "ImKcFkbFyDJpHVtL65L6ZgKls0jgSorMndoflrQBpqH6Jv0t8J8ybeTfvvL6zm6/lw5p/V+q0aZd+6l/+6S2uw==",
   "success": true,
   "projectFilePath": "C:\\workspace\\mommadinner\\MommaDinner.Infrastructure\\MommaDinner.InfraStructure.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "C:\\Users\\marcel.santos\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.21.0\\microsoft.identitymodel.jsonwebtokens.6.21.0.nupkg.sha512",
     "C:\\Users\\marcel.santos\\.nuget\\packages\\microsoft.identitymodel.logging\\6.21.0\\microsoft.identitymodel.logging.6.21.0.nupkg.sha512",
     "C:\\Users\\marcel.santos\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.21.0\\microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
+    "C:\\Users\\marcel.santos\\.nuget\\packages\\oneof\\3.0.223\\oneof.3.0.223.nupkg.sha512",
     "C:\\Users\\marcel.santos\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.21.0\\system.identitymodel.tokens.jwt.6.21.0.nupkg.sha512",
     "C:\\Users\\marcel.santos\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\marcel.santos\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"

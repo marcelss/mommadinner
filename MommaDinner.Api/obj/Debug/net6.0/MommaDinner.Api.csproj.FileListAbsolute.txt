@@ -5,6 +5,13 @@ C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\MommaDinner.Api.deps.j
 C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\MommaDinner.Api.runtimeconfig.json
 C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\MommaDinner.Api.dll
 C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\MommaDinner.Api.pdb
+C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\OneOf.dll
+C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\MommaDinner.Application.dll
 C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\MommaDinner.Contracts.dll
 C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\MommaDinner.Domain.dll
@@ -28,9 +35,3 @@ C:\workspace\mommadinner\MommaDinner.Api\obj\Debug\net6.0\refint\MommaDinner.Api
 C:\workspace\mommadinner\MommaDinner.Api\obj\Debug\net6.0\MommaDinner.Api.pdb
 C:\workspace\mommadinner\MommaDinner.Api\obj\Debug\net6.0\MommaDinner.Api.genruntimeconfig.cache
 C:\workspace\mommadinner\MommaDinner.Api\obj\Debug\net6.0\ref\MommaDinner.Api.dll
-C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
-C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\workspace\mommadinner\MommaDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll

@@ -9,3 +9,15 @@ Content-Type: application/json
     "email":"marcel_santos@developer.com",
     "password":"Sdadk3S33!"
 }
+
+###
+
+POST {{host}}/auth/oneof/register
+Content-Type: application/json
+
+{
+    "firstName":"Marcel",
+    "lastName":"Santos",
+    "email":"marcel_santos@developer.com",
+    "password":"Sdadk3S33!"
+}
