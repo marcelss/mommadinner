@@ -2,7 +2,7 @@ using System.Net;
 
 namespace MommaDinner.Application.Common.Errors;
 
-public interface IError
+public interface IErrorBase
 {
     public HttpStatusCode StatusCode { get; }
     public string ErrorMessage { get; }

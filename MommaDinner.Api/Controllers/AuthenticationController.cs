@@ -1,3 +1,4 @@
+using System.Linq;
 using MommaDinner.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using MommaDinner.Application.Services.Authentication;
@@ -6,9 +7,8 @@ using MommaDinner.Application.Common.Errors;
 
 namespace MommaDinner.Api.Controllers;
 
-[ApiController]
 [Route("auth")]
-public class AuthenticationController : ControllerBase
+public class AuthenticationController : ApiController
 {
     private readonly IAuthenticationService _authenticationService;
 
@@ -17,16 +17,71 @@ public class AuthenticationController : ControllerBase
         _authenticationService = authenticationService;
     }
 
-
-    [HttpPost("oneof/register")]
+    #region OneOf
+    /*
+    [HttpPost("register")]
     public IActionResult Register(RegisterRequest request)
     {
-        OneOf<AuthenticationResult, IError> registerResult = _authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
+        OneOf<AuthenticationResult, IErrorBase> registerResult = _authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
 
         return registerResult.Match(
             authResult => Ok(MapAuthResult(authResult)),
             error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage));
     }
+    */
+    #endregion OneOf
+
+    #region FluentResults
+    /*
+    [HttpPost("register")]
+    public IActionResult Register(RegisterRequest request)
+    {
+        var registerResult = _authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
+
+        if (registerResult.IsSuccess)
+            return Ok(MapAuthResult(registerResult.Value));
+
+        var firstError = registerResult.Errors.First();
+
+        if (firstError is DuplicateEmailError)
+            return Problem(statusCode: (int)StatusCodes.Status409Conflict, title: "User with given email already exists");
+
+        return Problem();
+    }
+    */
+    #endregion FluentResults
+
+    #region ErrorOr & Domain Errors
+
+    [HttpPost("register")]
+    public IActionResult Register(RegisterRequest request)
+    {
+        var registerResult = _authenticationService.Register(
+            request.FirstName,
+            request.LastName,
+            request.Email,
+            request.Password);
+
+        return registerResult.Match(
+            registerResult => Ok(MapAuthResult(registerResult)),
+            errors => Problem(errors)
+        );
+    }
+
+    [HttpPost("login")]
+    public IActionResult Login(LoginRequest request)
+    {
+        var authResult = _authenticationService.Login(
+            request.Email,
+            request.Password);
+       
+        return authResult.Match(
+            authResult => Ok(MapAuthResult(authResult)),
+            errors => Problem(errors)
+        );
+    }
+
+    #endregion ErrorOr & Domain Errors
 
     private static AuthenticationResponse MapAuthResult(AuthenticationResult result)
     {
@@ -36,22 +91,5 @@ public class AuthenticationController : ControllerBase
             result.User.LastName,
             result.User.Email,
             result.Token);
-    }
-
-    [HttpPost("login")]
-    public IActionResult Login(LoginRequest request)
-    {
-        var result = _authenticationService.Login(
-            request.Email,
-            request.Password);
-
-        var response = new AuthenticationResponse(
-            result.User.Id,
-            result.User.FirstName,
-            result.User.LastName,
-            result.User.Email,
-            result.Token);
-
-        return Ok(response);
     }
 }
