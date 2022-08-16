@@ -139,10 +139,10 @@ _For more examples, please refer to the [Documentation](https://github.com/marce
     - [x] Problem Details
     - [x] Via error endpoint
     - [x] Custom Problem Details Factory
-- [x] Flow Control
+- [x] Flow Control (CQRS)
     - [x] Via Exceptions
-    - [x] Via Oneof
-    - [x] Via FluentResults
+    - [ ] Via Oneof
+    - [ ] Via FluentResults
     - [x] Via ErrorOr & Domain Errors
 
 See the [open issues](https://github.com/marcelss/mommadinner/issues) for a full list of proposed features (and known issues).
