@@ -1,6 +1,6 @@
 using MommaDinner.Domain.Entities;
 
-namespace MommaDinner.Application.Services.Authentication;
+namespace MommaDinner.Application.Authentication.Commom;
 
 public record AuthenticationResult(
     User User,

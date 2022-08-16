@@ -1,22 +1,25 @@
 using System.Linq;
 using MommaDinner.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using MommaDinner.Application.Services.Authentication;
 using OneOf;
 using MommaDinner.Application.Common.Errors;
+using MediatR;
+using MommaDinner.Application.Authentication.Commands.Register;
+using MommaDinner.Application.Authentication.Queries.Login;
+using MommaDinner.Application.Authentication.Commom;
 
 namespace MommaDinner.Api.Controllers;
 
 [Route("auth")]
 public class AuthenticationController : ApiController
-{
-    private readonly IAuthenticationService _authenticationService;
+{    
+    private readonly ISender _mediator;
 
-    public AuthenticationController(IAuthenticationService authenticationService)
+    public AuthenticationController(ISender mediator)
     {
-        _authenticationService = authenticationService;
+        _mediator = mediator;
     }
-
+    
     #region OneOf
     /*
     [HttpPost("register")]
@@ -54,13 +57,15 @@ public class AuthenticationController : ApiController
     #region ErrorOr & Domain Errors
 
     [HttpPost("register")]
-    public IActionResult Register(RegisterRequest request)
+    public async Task<IActionResult> Register(RegisterRequest request)
     {
-        var registerResult = _authenticationService.Register(
+        var command = new RegisterCommand(
             request.FirstName,
             request.LastName,
             request.Email,
             request.Password);
+
+        var registerResult = await _mediator.Send(command);
 
         return registerResult.Match(
             registerResult => Ok(MapAuthResult(registerResult)),
@@ -69,11 +74,13 @@ public class AuthenticationController : ApiController
     }
 
     [HttpPost("login")]
-    public IActionResult Login(LoginRequest request)
+    public async Task<IActionResult> Login(LoginRequest request)
     {
-        var authResult = _authenticationService.Login(
+        var query = new LoginQuery(
             request.Email,
             request.Password);
+
+        var authResult = await _mediator.Send(query);
        
         return authResult.Match(
             authResult => Ok(MapAuthResult(authResult)),
