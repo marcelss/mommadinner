@@ -7,6 +7,7 @@ using MediatR;
 using MommaDinner.Application.Authentication.Commands.Register;
 using MommaDinner.Application.Authentication.Queries.Login;
 using MommaDinner.Application.Authentication.Commom;
+using MapsterMapper;
 
 namespace MommaDinner.Api.Controllers;
 
@@ -14,12 +15,13 @@ namespace MommaDinner.Api.Controllers;
 public class AuthenticationController : ApiController
 {    
     private readonly ISender _mediator;
-
-    public AuthenticationController(ISender mediator)
+    private readonly IMapper _mapper;
+    public AuthenticationController(ISender mediator, IMapper mapper)
     {
         _mediator = mediator;
+        _mapper = mapper;
     }
-    
+
     #region OneOf
     /*
     [HttpPost("register")]
@@ -59,16 +61,12 @@ public class AuthenticationController : ApiController
     [HttpPost("register")]
     public async Task<IActionResult> Register(RegisterRequest request)
     {
-        var command = new RegisterCommand(
-            request.FirstName,
-            request.LastName,
-            request.Email,
-            request.Password);
+        var command = _mapper.Map<RegisterCommand>(request);
 
         var registerResult = await _mediator.Send(command);
 
         return registerResult.Match(
-            registerResult => Ok(MapAuthResult(registerResult)),
+            registerResult => Ok(_mapper.Map<AuthenticationResponse>(registerResult)),
             errors => Problem(errors)
         );
     }
@@ -76,20 +74,23 @@ public class AuthenticationController : ApiController
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest request)
     {
-        var query = new LoginQuery(
-            request.Email,
-            request.Password);
+        var query = _mapper.Map<LoginQuery>(request);
 
         var authResult = await _mediator.Send(query);
        
         return authResult.Match(
-            authResult => Ok(MapAuthResult(authResult)),
+            authResult => Ok(_mapper.Map<AuthenticationResponse>(authResult)),
             errors => Problem(errors)
         );
     }
 
     #endregion ErrorOr & Domain Errors
 
+    /// <summary>
+    /// Manually Map
+    /// </summary>
+    /// <param name="result"></param>
+    /// <returns></returns>
     private static AuthenticationResponse MapAuthResult(AuthenticationResult result)
     {
         return new AuthenticationResponse(
